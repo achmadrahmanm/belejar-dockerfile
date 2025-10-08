@@ -39,6 +39,15 @@ docker container stop copy
 docker container rm copy
 docker image rm achmadrahmanm/copy
 
+# ignore
+docker build -t achmadrahmanm/ignore ignore
+docker container create --name ignore achmadrahmanm/ignore
+docker container start ignore
+docker container logs ignore
+docker container stop ignore
+docker container rm ignore
+docker image rm achmadrahmanm/ignore
+
 
 
 
