@@ -48,6 +48,26 @@ docker container stop ignore
 docker container rm ignore
 docker image rm achmadrahmanm/ignore
 
+# expose
+docker build -t achmadrahmanm/expose expose
+docker image inspect achmadrahmanm/expose
+docker container create --name expose -p 8080:8080 achmadrahmanm/expose
+docker container start expose
+docker container logs expose
+curl http://localhost:8080
+docker container stop expose
+docker container rm expose
+docker image rm achmadrahmanm/expose    
 
+# env
+docker build -t achmadrahmanm/env env
+docker image inspect achmadrahmanm/env
+docker container create --name env -p 8080:8080 achmadrahmanm/env
+docker container start env
+docker container logs env
+curl http://localhost:8080
+docker container stop env
+docker container rm env
+docker image rm achmadrahmanm/env
 
 
