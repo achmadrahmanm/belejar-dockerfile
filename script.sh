@@ -30,3 +30,15 @@ docker container rm add
 
 docker image rm achmadrahmanm/add
 
+# copy
+docker build -t achmadrahmanm/copy copy
+docker container create --name copy achmadrahmanm/copy
+docker container start copy
+docker container logs copy
+docker container stop copy
+docker container rm copy
+docker image rm achmadrahmanm/copy
+
+
+
+
