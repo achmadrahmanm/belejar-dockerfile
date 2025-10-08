@@ -19,3 +19,14 @@ docker container rm command
 
 # label
 docker build -t achmadrahmanm/label label
+
+# add
+docker build -t achmadrahmanm/add add
+docker container create --name add achmadrahmanm/add
+docker container start add
+docker container logs add
+docker container stop add
+docker container rm add
+
+docker image rm achmadrahmanm/add
+
