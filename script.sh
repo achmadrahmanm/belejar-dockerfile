@@ -62,10 +62,10 @@ docker image rm achmadrahmanm/expose
 # env
 docker build -t achmadrahmanm/env env
 docker image inspect achmadrahmanm/env
-docker container create --name env -p 8080:8080 achmadrahmanm/env
+docker container create --name env --env APP_PORT=9090 -p 9090:9090 achmadrahmanm/env
 docker container start env
 docker container logs env
-curl http://localhost:8080
+curl http://localhost:9090
 docker container stop env
 docker container rm env
 docker image rm achmadrahmanm/env
